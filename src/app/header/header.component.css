@@ -1,0 +1,45 @@
+.header-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffe645;
+    padding: 0 20px;
+    box-shadow: 0px 1px 6px #ff9207;
+    position: fixed;
+}
+.logo-name {
+    cursor: pointer;
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.logout-container {
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+.mb {
+    padding-bottom: 80px;
+}
+
+@media(max-width:991px){ 
+
+    .logo-name {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+    .logout-container{
+        font-size: 16px;
+    }
+    .header-container {
+        height: 60px;
+    }
+    .mb {
+        padding-bottom: 70px;
+    }
+}

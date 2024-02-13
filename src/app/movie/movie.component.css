@@ -1,0 +1,230 @@
+.movie-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top {
+    display: flex;
+}
+
+.left {
+    max-width: 450px;
+    width: 100%;
+}
+
+.name {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.cover {
+    max-width: 350px;
+    width: 100%;
+    height: 500px;
+    margin-right: 50px;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right {
+    max-width: 900px;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.right .title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.rating-form .form-group {
+    margin-top: 20px;
+}
+
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-container {
+    margin-top: 30px;
+}
+
+.bottom {
+    margin-top: 50px;
+}
+
+.bottom .title {
+    margin-bottom: 30px;
+}
+
+.reviews {
+    width: 100%;
+}
+
+.review {
+    margin-bottom: 25px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.review-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-left .author {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.author-dt {
+    opacity: 0.7;
+}
+
+/* .review-right .rating {
+    display: flex;
+    align-items: center;
+} */
+.review-right .rating p {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.rating-value {
+    margin-left: 20px;
+}
+
+.review-text {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.no-reviews {
+    font-style: italic;
+    font-size: 18px;
+}
+
+
+@media(max-width:1499px) {
+
+    .movie-container {
+        max-width: 100%;
+        padding: 0 50px;
+    }
+}
+
+@media(max-width:991px) {
+    .name {
+        font-size: 24px;
+        margin-bottom: 2px;
+    }
+
+    .right .title {
+        margin-bottom: 0;
+        font-size: 22px;
+    }
+
+    .rating-form .form-group {
+        margin-top: 16px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .bottom .title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .review {
+        padding: 16px;
+    }
+
+    .review-left .author {
+        font-size: 15px;
+    }
+
+    .review-right .rating p {
+        font-size: 15px;
+    }
+
+    .cover {
+        max-width: 285px;
+        height: 400px;
+    }
+
+    .left {
+        max-width: 400px;
+    }
+}
+
+@media(max-width:768px) {
+    .top {
+        flex-wrap: wrap;
+    }
+    .right {
+        padding-top: 25px;
+    }
+}
+
+@media (max-width: 480px){
+    .movie-container {
+        max-width: 100%;
+        padding: 0px 20px;
+    }
+.name {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.right .title {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+label {
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+.form-control {
+    font-size: 12px;
+}
+.btn-container {
+    margin-top: 20px;
+}
+.btn-dark {
+    font-size: 14px;
+}
+.bottom {
+    margin-top: 30px;
+}
+.bottom .title {
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+.review-left .author {
+    font-size: 13px;
+}
+.author_dt {
+    font-size: 12px;
+}
+.review-right .rating p,
+.rating-value{
+    font-size: 13px;
+}
+}

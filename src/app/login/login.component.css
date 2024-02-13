@@ -1,0 +1,153 @@
+.login-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffe645 0%, #e2aa02 100%);
+    position: relative;
+}
+
+.logo {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.desc-outer-box {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 140px;
+    right: 30px;
+    text-align: right;
+    width: 80%;
+    padding: 30px;
+    box-shadow: 5px 5px 20px #ff9900;
+    background: #f5d02d;
+    border-radius: 5px;
+    z-index: 99999;
+}
+
+.film {
+    position: absolute;
+    top: 0px;
+    left: 16px;
+    height: 100vh;
+    opacity: 1;
+    z-index: 0;
+}
+
+.login-form {
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    box-shadow: 5px 5px 20px #383838;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.btn-container {
+    position: relative;
+}
+
+.btn {
+    margin-top: 30px;
+}
+
+.error {
+    position: absolute;
+    top: 32px;
+    right: 0px;
+    color: red;
+}
+
+@media(max-width:1399px) {
+    .desc-outer-box {
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 60px;
+        letter-spacing: 8px;
+    }
+}
+
+@media(max-width:575px) {
+    .desc-outer-box {
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+        width: 90%;
+        padding: 16px;
+    }
+
+    .login-form {
+        max-width: 100%;
+        width: 90%;
+        padding: 16px;
+        top: 50%;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .film {
+        width: 100%;
+        left: 0;
+    }
+
+    .logo {
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        top: 63%;
+    }
+    .logo {
+        font-size: 40px;
+        letter-spacing: 5px;
+    }
+    .desc-outer-box  {
+        top: 110px;
+        font-size: 14px;
+    }
+    label {
+        font-size: 14px; 
+        padding-bottom: 4px;
+    }
+    .form-group{
+        margin-top: 16px;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .login-form {
+        height: auto;
+    }
+    .btn {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    .error {
+        font-size: 12px;
+    }
+}
