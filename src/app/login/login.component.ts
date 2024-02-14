@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -9,30 +10,58 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  username = "";
-  password = "";
+  // userName = "";
+  // password = "";
   errorMsg = "";
 
+
+  
+  signupUsers: any[]=[];
+  signupObj: any = {
+    userName: '',
+    email: '',
+    password: ''
+  };
+  loginObj: any = {
+    userName: '',
+    password: ''
+  };
   constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    const localData = localStorage.getItem('signUpUsers');
+    if(localData != null){
+      this.signupUsers = JSON.parse(localData);
+    }
   }
 
   login() {
-    if (this.username.trim().length === 0) {
-      this.errorMsg = "Username is required";
-    } else if (this.password.trim().length === 0) {
+   
+    if (this.loginObj.userName.trim().length === 0) {
+      this.errorMsg = "userName is required";
+    } else if (this.loginObj.password.trim().length === 0) {
       this.errorMsg = "Password is required";
     } else {
       this.errorMsg = "";
-      let res = this.auth.login(this.username, this.password);
-      if (res === 200) {
+      const isUserExist = this.signupUsers.find(m => m.userName == this.loginObj.userName && m.password == this.loginObj.password);
+      if (isUserExist !=undefined) {
         this.router.navigate(['home']);
       }
-      if (res === 403) {
+      else {
         this.errorMsg = "Invalid Credentials";
       }
     }
   }
+
+    onSignUp(){
+      this.signupUsers.push(this.signupObj);
+      localStorage.setItem('signUpUsers',JSON.stringify(this.signupUsers));
+      this.signupObj = {
+        userName: '',
+        email: '',
+        password: ''
+      };
+    }
+  
 
 }

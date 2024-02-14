@@ -9,13 +9,13 @@ export class AuthService {
   constructor(private router: Router) { }
 
 
-  login(uname: string, pword: string) {
-    if (uname === uname && pword === pword) {
-      return 200;
-    } else {
-      return 403;
-    }
-  }
+  // login(uname: string, pword: string) {
+  //   if (uname === uname && pword === pword) {
+  //     return 200;
+  //   } else {
+  //     return 403;
+  //   }
+  // }
 
   logout() {
     this.router.navigate(['login']);
