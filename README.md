@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
+Cinemate is the Movie rating web application build using Angular^16.2.9. As the leading online aggregator of movie and TV show
+ reviews from critics, we provide fans with a comprehensive guide to what’s Fresh – and what’s Rotten – in theaters and at home. If you’re an
+entertainment fan looking for a recommendation, or to share an opinion, you’ve come to the right place.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
